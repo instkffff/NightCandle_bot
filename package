@@ -1,0 +1,6 @@
+{
+  "main": "index.js",
+  "dependencies": {
+    "telegraf": "3.22.2"
+  }
+}
