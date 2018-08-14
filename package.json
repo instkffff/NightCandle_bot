@@ -5,6 +5,7 @@
   "dependencies": {
     "telegraf": "3.22.2",
     "dotenv": "6.0.0",
-    "time-stamp": "2.0.1"
+    "time-stamp": "2.0.1",
+    "log4js": "3.0.5"
   }
 }
