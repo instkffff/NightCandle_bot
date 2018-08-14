@@ -1,5 +1,6 @@
 //引入
-require('dotenv').config()
+require('dotenv').config({path:'config.env'})
+	
 const Telegraf = require('telegraf')
 
 // 验证密钥
