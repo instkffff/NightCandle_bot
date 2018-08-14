@@ -4,6 +4,7 @@
   "main": "index.js",
   "dependencies": {
     "telegraf": "3.22.2",
-    "dotenv": "6.0.0"
+    "dotenv": "6.0.0",
+    "time-stamp": "2.0.1"
   }
 }
