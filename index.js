@@ -10,8 +10,8 @@ const logger = require('./modules/log')
 	bot.use((ctx) => {console.log(ctx.message)})
 
 
-	logger('message').info(bot.use((ctx) => (ctx.message)))
-	logger('callbackQuery').info(bot.use((ctx) => (ctx.callbackQuery)))
+	logger('message').info(bot.use((ctx) => ctx.message))
+	logger('callbackQuery').info(bot.use((ctx) => ctx.callbackQuery))
 
 
 bot.startPolling()
