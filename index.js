@@ -1,8 +1,9 @@
 //引入
+require('dotenv').config()
 const Telegraf = require('telegraf')
 
 // 验证密钥
-const bot = new Telegraf('687784594:AAGW31OcvTw7Fs9UX1QLHoqE5YXILT1u8mY')
+const bot = new Telegraf(process.env.BOT_TOKEN)
 
 // 机器人自动回复
 bot.start((ctx) => ctx.reply('Welcome'))

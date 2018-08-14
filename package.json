@@ -1,0 +1,9 @@
+{
+  "name": "NightCandle_bot",
+  "version": "0.0.1",
+  "main": "index.js",
+  "dependencies": {
+    "telegraf": "3.22.2",
+    "dotenv": "6.0.0"
+  }
+}
