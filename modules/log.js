@@ -1,15 +1,4 @@
-const loggerMessage = require('../modules/logger/logMessage')
-const loggerCallbackQuery = require('../modules/logger/loggerCallbackQuery')
+const log4js = require('log4js')
+log4js.configure('./config/log4js.config')
 
-function logger(logtype) {
-
-	if(logtype == 'message'){
-		return loggerMessage
-	}
-	else if(logtype == 'callbackQuery'){
-		return loggerCallbackQuery
-	}
-
-}
-	
-module.exports = logger
+module.exports = log4js

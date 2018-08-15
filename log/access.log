@@ -1,0 +1,15 @@
+[2018-08-15T14:47:03.447] [INFO] message - Telegraf {
+  handler: [Function],
+  options: { retryAfter: 1, handlerTimeout: 0 },
+  telegram: 
+   Telegram {
+     token: '687784594:AAGW31OcvTw7Fs9UX1QLHoqE5YXILT1u8mY',
+     options: 
+      { apiRoot: 'https://api.telegram.org',
+        webhookReply: true,
+        agent: [Object] },
+     response: undefined },
+  handleError: [Function],
+  context: {},
+  polling: { offset: 0, started: false } }
+[2018-08-15T14:49:02.274] [INFO] message - bot.use((ctx) => {ctx.message})
