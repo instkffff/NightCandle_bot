@@ -11,8 +11,27 @@ const firebaseSession = require('./modules/firebase-session.js')
 	bot.on('sticker', (ctx) => ctx.reply('👍'))
 	bot.hears('hi', (ctx) => ctx.reply('Hey there'))
 
+//firebase-user-auth
+	bot.hears('/SignUp',({ reply,from}) => {
+
+		admin.auth().getUser(`${from.id}`)
+			.then(function(userRecord){
+				reply(`You already SignUp,Please don't try it again`)
+			})
+			.catch(function(error){
+				admin.auth().importUsers([{
+				uid: `${from.id}`,
+				displayName: `${from.first_name}`
+				}])
+				.then(reply(`Congratulation ${from.first_name} SignUp Success`))
+
+			})
+	
+	})
+
+
 //firebase-session
-  const database = admin.database()
+  	const database = admin.database()
 	bot.use(firebaseSession(database.ref('sessions')))
 	bot.on('text',(ctx,next) => {
 		ctx.session.counter = ctx.session.counter || 0
