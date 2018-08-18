@@ -19,7 +19,7 @@ const firebaseSession = require('./modules/firebase-session.js')
 		ctx.session.counter++
 		return next()
 	})
-	bot.hears('/counter',({ reply,session,from }) => reply(`${session.counter} messages from ${from.username}`))
+	bot.hears('/counter',({ reply,session,from }) => reply(`${session.counter} messages from ${from.first_name}`))
 
 //log file
 bot.use((ctx) => {logger.info(ctx.message)})
