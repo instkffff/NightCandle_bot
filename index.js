@@ -52,7 +52,8 @@ bot.use(commandParts())
       (a) => {
         console.log(a.appraisal.totals.sell)
 
-        ctx.reply(`JitaSellPrice:${a.appraisal.totals.sell} isk`)
+        ctx.reply(`JitaSellPrice:${a.appraisal.totals.sell} isk 
+JitaBuyPrice:${a.appraisal.totals.buy} isk`)
         }
     )
   })
