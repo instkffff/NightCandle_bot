@@ -11,6 +11,8 @@ const ep = require('evepraisal')
 	bot.help((ctx) => ctx.reply('now you can use evepraisal here with commands "/evepraisal marketlocation" location support jita,amarr,universe'))
 	//bot.on('sticker', (ctx) => ctx.reply('👍'))
 	//bot.hears('hi', (ctx) => ctx.reply('Hey there'))
+	bot.command('modern', ({ reply }) => reply('Yo'))
+	bot.hears(/reverse (.+)/, ({ match, reply }) => reply(match[1]))
 
 
 	
@@ -33,6 +35,22 @@ const ep = require('evepraisal')
 	
 	})
 
+//eveprice
+	bot.hears(/reverse (.+)/,({reply,from}) =>{
+
+		let item = `${from.text}`
+		let newitem = item.replace(/^(\/price)$/,"")
+		ep.creat(
+			`newitem`,
+			'jita',
+		).then((a) => reply(a)
+		)
+
+	})
+
+
+
+	
 
 //firebase-session
   	const database = admin.database()

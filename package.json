@@ -4,15 +4,14 @@
   "main": "index.js",
   "dependencies": {
     "dotenv": "6.0.0",
+    "evepraisal": "latest",
+    "firebase-admin": "latest",
     "log4js": "3.0.5",
     "npm": "^6.4.0",
+    "regexgen.js": "^0.2.1",
     "telegraf": "3.22.2",
     "telegraf-logger": "3.0.0",
     "telegraf-session-firebase": "0.0.1",
-    "time-stamp": "2.0.1",
-    "firebase-admin": "latest",
-    "evepraisal":"latest",
-    "regexgen":"latest"
-
+    "time-stamp": "2.0.1"
   }
 }
