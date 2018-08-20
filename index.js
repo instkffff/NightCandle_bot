@@ -5,6 +5,10 @@ const errlogger = log4js.getLogger('default')
 const admin = require('./modules/firebase.js')
 const firebaseSession = require('./modules/firebase-session.js')
 const ep = require('evepraisal')
+const commandParts = require('telegraf-command-parts')
+
+
+bot.use(commandParts())
 
 //bot test
 	bot.start((ctx) => ctx.reply('Welcome! please check /help for more information'))
@@ -36,18 +40,22 @@ const ep = require('evepraisal')
 	})
 
 //eveprice
-	bot.hears(/reverse (.+)/,({reply,from}) =>{
+	bot.command('price',(ctx) => {
 
-		let item = `${from.text}`
-		let newitem = item.replace(/^(\/price)$/,"")
-		ep.creat(
-			`newitem`,
-			'jita',
-		).then((a) => reply(a)
-		)
+    let item = ctx.state.command.args
+    console.log(ctx.state.command.args)
+    ep.create(
+      `${item}`,
+      'jita',
+      {}
+    ).then(
+      (a) => {
+        console.log(a.appraisal.totals.sell)
 
-	})
-
+        ctx.reply(`JitaSellPrice:${a.appraisal.totals.sell} isk`)
+        }
+    )
+  })
 
 
 	

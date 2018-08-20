@@ -12,6 +12,7 @@
     "telegraf": "3.22.2",
     "telegraf-logger": "3.0.0",
     "telegraf-session-firebase": "0.0.1",
-    "time-stamp": "2.0.1"
+    "time-stamp": "2.0.1",
+    "telegraf-command-parts":"1.0.3"
   }
 }
