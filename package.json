@@ -10,6 +10,9 @@
     "telegraf-logger": "3.0.0",
     "telegraf-session-firebase": "0.0.1",
     "time-stamp": "2.0.1",
-    "firebase-admin": "latest"
+    "firebase-admin": "latest",
+    "evepraisal":"latest",
+    "regexgen":"latest"
+
   }
 }

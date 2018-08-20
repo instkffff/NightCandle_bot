@@ -4,12 +4,16 @@ const logger = log4js.getLogger('message')
 const errlogger = log4js.getLogger('default')
 const admin = require('./modules/firebase.js')
 const firebaseSession = require('./modules/firebase-session.js')
+const ep = require('evepraisal')
 
 //bot test
-	bot.start((ctx) => ctx.reply('Welcome'))
-	bot.help((ctx) => ctx.reply('Send me a sticker'))
-	bot.on('sticker', (ctx) => ctx.reply('👍'))
-	bot.hears('hi', (ctx) => ctx.reply('Hey there'))
+	bot.start((ctx) => ctx.reply('Welcome! please check /help for more information'))
+	bot.help((ctx) => ctx.reply('now you can use evepraisal here with commands "/evepraisal marketlocation" location support jita,amarr,universe'))
+	//bot.on('sticker', (ctx) => ctx.reply('👍'))
+	//bot.hears('hi', (ctx) => ctx.reply('Hey there'))
+
+
+	
 
 //firebase-user-auth
 	bot.hears('/SignUp',({ reply,from}) => {
@@ -45,3 +49,8 @@ bot.use((ctx) => {logger.info(ctx.message)})
 bot.catch((err) => {logger.debug(err)})
 
 bot.startPolling()
+
+
+
+
+
