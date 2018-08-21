@@ -9,7 +9,6 @@ const Extra = require('telegraf/extra')
 
 const Markup = require('telegraf/markup')
 
-const PORT = process.env.PORT || 8374
 
 
 // 验证密钥
