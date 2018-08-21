@@ -77,7 +77,7 @@ bot.catch((err) => {logger.debug(err)})
 
 bot.startPolling()
 
-
+app.set('port', process.env.PORT || 3000);
 
 
 
