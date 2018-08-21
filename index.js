@@ -6,6 +6,8 @@ const admin = require('./modules/firebase.js')
 const firebaseSession = require('./modules/firebase-session.js')
 const ep = require('evepraisal')
 const commandParts = require('telegraf-command-parts')
+const PORT = process.env.PORT || 3000
+const URL = process.env.URL || 'https://nightcandlebot.herokuapp.com'
 
 
 bot.use(commandParts())
