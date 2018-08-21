@@ -6,7 +6,7 @@ const admin = require('./modules/firebase.js')
 const firebaseSession = require('./modules/firebase-session.js')
 const ep = require('evepraisal')
 const commandParts = require('telegraf-command-parts')
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 8374
 const URL = process.env.URL || '0.0.0.0'
 
 
