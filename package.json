@@ -2,6 +2,9 @@
   "name": "NightCandle_bot",
   "version": "0.0.1",
   "main": "index.js",
+  "script":{
+    "start": "node index.js"
+  },
   "dependencies": {
     "dotenv": "6.0.0",
     "evepraisal": "latest",
@@ -14,5 +17,8 @@
     "telegraf-session-firebase": "0.0.1",
     "time-stamp": "2.0.1",
     "telegraf-command-parts":"1.0.3"
+  },
+  "engines": {
+    "node": "8.x"
   }
 }
