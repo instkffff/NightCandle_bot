@@ -6,8 +6,6 @@ const admin = require('./modules/firebase.js')
 const firebaseSession = require('./modules/firebase-session.js')
 const ep = require('evepraisal')
 const commandParts = require('telegraf-command-parts')
-const PORT = process.env.PORT || 8374
-
 
 bot.use(commandParts())
 
@@ -78,7 +76,3 @@ bot.catch((err) => {logger.debug(err)})
 
 bot.startPolling()
 
-
-server.listen(server_port, server_host, function() {
-    console.log('Listening on port %d', server_port);
-});
