@@ -11,7 +11,7 @@ bot.use(commandParts())
 
 //bot test
 	bot.start((ctx) => ctx.reply('Welcome! please check /help for more information'))
-	bot.help((ctx) => ctx.reply('now you can use evepraisal here with commands "/evepraisal marketlocation" location support jita,amarr,universe'))
+	bot.help((ctx) => ctx.reply('now you can use evepraisal here with commands "/price" '))
 	//bot.on('sticker', (ctx) => ctx.reply('👍'))
 	//bot.hears('hi', (ctx) => ctx.reply('Hey there'))
 	bot.command('modern', ({ reply }) => reply('Yo'))
