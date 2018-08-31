@@ -15,21 +15,20 @@ let esi2 = esi({
   })
 
 // Fetch all active alliance ids (could also call 'esi.alliances.all()')
-
-esi.alliances(1695357456).corporations().then(result => {
-  for (let i=1; i<=result.length; i++){
+esi.alliances(99003581).corporations().then(result => {
+  for (let i=0; i<=result.length; i++){
     esi.corporations(result[i]).info().then(info =>{ 
     	var corpName = {};
         corpName[result[i]]={
           Ticker:info.ticker,
           Name:info.corporation_name, 
         }
+        var corpList= Object.assign(corpName)
         console.log(corpName)
     })
   }
 }).catch(error => {
   console.error(error)
 })
-
 
 
